@@ -1,0 +1,21 @@
+{
+    "page":{
+        "homepage":{
+            "section":{
+                "herosection":{
+                    "heading1":{
+                        "value": "4545k Life, Think Insurance"
+                    },
+                    "heroPera":{
+                        "value": "Tailored insurance policies with proper coverages and low rates. You can quote and buy your policy instantly online."
+                    },
+
+                    "heroImage": {
+                        "value":"/images/think-life1.png"
+                    }
+                }
+            }
+        }
+    }
+}
+
