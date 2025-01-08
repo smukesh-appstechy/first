@@ -13,34 +13,36 @@ import HowItWorks from './components/how-it-works/HowItWorks.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: "",
-        element: <Home/>
+        element: <Home />
       },
       {
-        path:"products",
-        element:<Products/>
+        path: "products",
+        element: <Products />
       },
       {
         path: "about",
-        element:<About/>
+        element: <About />
       },
       {
-        path:"blog",
-        element:<Blog/>
+        path: "blog",
+        element: <Blog />
       },
       {
-        path:"how-it-works",
-        element: <HowItWorks/>
+        path: "how-it-works",
+        element: <HowItWorks />
       }
     ]
   }
-])
+], {
+  basename: '/repository' // Replace 'repository' with your repo name
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>,
 )
