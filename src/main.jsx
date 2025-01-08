@@ -37,9 +37,7 @@ const router = createBrowserRouter([
       }
     ]
   }
-], {
-  basename: '/repository' // Replace 'repository' with your repo name
-});
+],);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
