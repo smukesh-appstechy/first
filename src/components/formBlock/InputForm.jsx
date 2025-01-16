@@ -1,6 +1,5 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { data } from "react-router-dom";
 
 const InputForm = () => {
   const {
@@ -15,49 +14,82 @@ const InputForm = () => {
   }
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="first name">first name</label>
-        <input type="text" className="border" {...register(" firstName")} />
-        <br />
-        <br />
-        <label htmlFor="last name">last name</label>
-        <input
-          type="text"
-          className="border"
-          {...register(" lastName", 
-            { 
-              required: true, 
-              minLength: {value:3, message:"Min len atleast 3"}})}/>
-              {errors.lastName && <p>{errors.lastName.message}</p>}
-        <br />
-        <br />
-        <label htmlFor="email">email</label>
-        <input type="text" className="border" {...register(" email")} />
-        <br />
-        <br />
-        <input type="submit" className="border px-3" />
-      </form>
-                <section className="form section py-10">
+     
+                <section className="form section py-10 bg-[#E3F2FD]">
                   <div className="container m-auto">
                     <div className="form-wrapper">
-                        <form action="" className="grid grid-cols-4 gap-4">
-                          <div className="form-group">
-                            <label htmlFor="">First Name</label>
-                            <input type="text" />
+                        <form action="" onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-6 gap-16">
+                          <div className="form-group flex flex-col relative">
+                            <label htmlFor="" className="absolute left-[20px] top-[-10px] text-base  px-2 ">First Name</label>
+                            <input type="text" className="border rounded-xl text-base p-5 " {...register("firstName", {
+                              required:{
+                                value:true,
+                                message:"First name can't be blank"
+                              },
+                              pattern:{
+                                value: /^[A-Za-z]+$/,
+                                message: "First name contain only latters"
+                              },
+                              minLength:{
+                                value: 2,
+                                message: "First name must be at least 2 characters"
+                              }
+                            })} />
+                            {errors.firstName &&(
+                              <p className="text-red-700 text-sm">{errors.firstName.message}</p>
+                            )}
                           </div>
-                          <div className="form-group">
-                            <label htmlFor="">Last Name</label>
-                            <input type="text" />
+
+                          <div className="form-group flex flex-col relative">
+                            <label htmlFor="" className="absolute left-[20px] top-[-10px] text-base  px-2 ">Last Name</label>
+                            <input type="text" className="border rounded-xl text-base p-5 " {...register("lastName", {
+                              required:{
+                                value:true,
+                                message:"Last name can't be blank"
+                              },
+                              pattern:{
+                                value:/^[A-Za-z]+$/,
+                                message:"Last name contain only latters"
+                              },
+                              minLength:{
+                                value: 2,
+                                message:"Last name must be at least 2 characters"
+                              }
+                            })} />
+                            {errors.lastName &&(
+                              <p className="text-red-700 text-sm">{errors.lastName.message}</p>
+                            )}
                           </div>
-                          <div className="form-group">
-                            <label htmlFor="">Last Name</label>
-                            <select name="" id="">
+
+                          <div className="form-group flex flex-col relative">
+                            <label htmlFor="" className="absolute left-[20px] top-[-10px] text-base  px-2 ">Email</label>
+                            <input type="email" className="border rounded-xl text-base p-5 " {...register("email",{
+                              required:{
+                                value:true,
+                                message: "Email is required"
+                              },
+                              pattern:{
+                                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                                message:"Email is not valid"
+                              }
+                            })}/>
+                            {errors.email &&(
+                              <p className="text-red-700 text-sm">{errors.email.message}</p>
+                            )}
+                          </div>
+
+                          <div className="form-group flex flex-col relative col-span-2">
+                            <label htmlFor="" className="absolute left-[20px] top-[-10px] text-base  px-2 ">Insourance Type</label>
+                            <select name="" id="" className="border rounded-xl text-base p-5 ">
                               <option value="select-1">select 1</option>
                             </select>
                           </div>
-                          <div className="form-group">
-                            <input type="submit" value="Submit" />
+
+                          <div className="form-group flex flex-col relative">
+                            <input type="submit" value="Submit" className="border rounded-xl text-base p-5 border-purple text-purple bg-white" />
                           </div>
+                          
+                          
                         </form>
                     </div>
                   </div>

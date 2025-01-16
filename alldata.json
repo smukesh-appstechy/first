@@ -1,21 +1,98 @@
 {
-    "page":{
-        "homepage":{
-            "section":{
-                "herosection":{
-                    "heading1":{
-                        "value": "4545k Life, Think Insurance"
-                    },
-                    "heroPera":{
-                        "value": "Tailored insurance policies with proper coverages and low rates. You can quote and buy your policy instantly online."
-                    },
+  "page": {
+    "homepage": {
+      "section": {
+        "herosection": {
+          "heading1": {
+            "value": "Think Life,"
+          },
+          "span1": {
+            "value": "Think Insurance"
+          },
+          "heroPera": {
+            "value": "Tailored insurance policies with proper coverages and low rates. You can quote and buy your policy instantly online."
+          },
 
-                    "heroImage": {
-                        "value":"/images/think-life1.png"
+          "heroImage": {
+            "value": "/images/himnakan.png"
+          },
+          "butttonTxt": {
+            "value": "Get Started"
+          }
+        },
+        "howItWork": {
+          "heading": {
+            "value": "How It Works"
+          },
+          "headingPara": {
+            "value": " Life insurance is a must if your loved ones are financially dependent on you. It shields your beneficiaries from unforeseen circumstances and supports them through a painful time of loss."
+          },
+          "howCardData": [
+            {
+              "cardContent": {
+                "number": {
+                  "value": 1
+                },
+                "cardHeading": {
+                  "value": "Apply"
+                },
+                "CardPara": {
+                  "value": " Choose your coverage and apply. Fill out the application with more detailed information about yourself, your health, and your lifestyle."
+                }
+              }
+            },
+            {
+              "cardContent": {
+                "number": {
+                  "value": 2
+                },
+                "cardHeading": {
+                  "value": "Get a Quote"
+                },
+                "CardPara": {
+                  "value": " Provide some basic information to get an estimated premium amount and coverage options."
+                }
+              }
+            },
+            {
+              "cardContent": {
+                "number": {
+                  "value": 3
+                },
+                "cardHeading": {
+                  "value": "Get Covered"
+                },
+                "CardPara": {
+                  "value": " Receive confirmation and a policy document after we process your application and payment. "
+                }
+              }
+            }
+          ]
+        },
+        "faqsection":[
+            {
+                "faqs":{
+                    "faqheading":{
+                    "value":"What is life insurance?"
+                }, 
+                "faqanswer":{
+                    "value":"Life insurance is a contract between an individual and an insurer that provides protection against the financial consequences of death."
+                }
+                }
+            },
+            {
+                "faqs":{
+                    "faqheading":{
+                        "value":"How do I decide if I need life insurance?"
+                    },
+                    "faqanswer":{
+                        "value":"There are lots of factors that go into deciding whether or not you need life insurance, including how much debt you have and how many dependents rely on you financially. But it all comes down to one question: if something happened to you tomorrow, would your family be able to keep paying their bills? If not, then yes—you should get life insurance."
                     }
                 }
             }
-        }
+            
+        ]
+      }
     }
+  }
 }
-

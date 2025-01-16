@@ -1,50 +1,60 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import allData from "../../../alldata.json"
-import InputForm from '../formBlock/InputForm';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import allData from "../../../alldata.json";
+import InputForm from "../formBlock/InputForm";
+import HowItWork from "./HowItWork";
+import SectionHeading from "./SectionHeading";
+import ApiData from "./ApiData";
 
 const Home = () => {
   return (
-    <div className="">
-    <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-        <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-            <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
-                <h2 className="text-4xl font-bold sm:text-5xl">
-                    Download Now
-                    <span className="hidden sm:block text-4xl">Lorem Ipsum</span>
-                    <span className="hidden sm:block text-4xl">{allData.page.homepage.section.herosection.heading1.value}</span>
-                    <span>{allData.page.homepage.section.herosection.heroPera.value}</span>
-
-                </h2>
-
-                <Link
-                    className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-                    to="/"
-                >
-                    <svg
-                        fill="white"
-                        width="24"
-                        height="24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                    >
-                        <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
-                    </svg>
-                    &nbsp; Download now
-                </Link>
+    <>
+      <section className="py-5">
+        <div className="container m-auto">
+          <div className="hero-wrapper grid grid-cols-2 gap-16">
+            <div className="hero-txt flex justify-center items-start flex-col">
+              <h1 className="text-purple hero-heading text-6xl font-bold leading-normal">
+                {allData.page.homepage.section.herosection.heading1.value}{" "}
+                <span className="text-black block text-6xl font-bold">
+                  {allData.page.homepage.section.herosection.span1.value}
+                </span>
+              </h1>
+              <p className="pt-5 text-lg">{allData.page.homepage.section.herosection.heroPera.value}</p>
+              <button className="text-xl rounded-md bg-purple py-5 px-10 mt-10 text-white">
+                {allData.page.homepage.section.herosection.butttonTxt.value}
+              </button>
             </div>
+            <div className="hero-image">
+              <img
+                src={allData.page.homepage.section.herosection.heroImage.value}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-
-        <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-            <img className="w-96" src={allData.page.homepage.section.herosection.heroImage.value} alt="image1" />
+      </section>
+      <InputForm />
+      <SectionHeading />
+      <section className="pb-10">
+        <div className="container m-auto">
+          <div className="how-card-wrapper grid grid-cols-3 gap-16">
+            {allData.page.homepage.section.howItWork.howCardData.map((data) => (
+              <HowItWork
+                number={data.cardContent.number.value}
+                heading={data.cardContent.cardHeading.value}
+                paraTxt={data.cardContent.CardPara.value}
+              />
+            ))}
+          </div>
+          <div className="how-button-wrapper pt-10 text-center ">
+                    <Link className="border-purple border rounded-md py-4 px-5 text-base inline-block mr-5 text-purple">Learn More</Link>
+                    <Link className="border-purple border rounded-md py-4 px-5 text-base inline-block mr-5 text-white bg-purple">Get Started</Link>
+          </div>
         </div>
-    </aside>
+      </section>
+      
+    </>
+  );
+};
 
-    <InputForm/>
-</div>
-  )
-}
-
-export default Home
+export default Home;
