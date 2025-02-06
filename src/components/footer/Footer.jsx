@@ -1,7 +1,18 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 const Footer = () => {
+     const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+      } = useForm();
+
+      function subscribe(data){
+        console.log(data);
+      }
   return (
     <>
      <footer className="bg-[#1A223F] pt-20">
@@ -12,9 +23,21 @@ const Footer = () => {
                 <img src="/images/footerLogo.png" alt="" />
                 <div className="newsletter-wrapper pt-20">
                     <p className='text-xl text-white mb-5'>Subscribe to our newsletter</p>
-                    <form action="" className='flex gap-5'>
-                        <input type="email" className='border rounded-md py-4 px-5 w-96' placeholder='Your Email'/>
-                        <input type="submit" value="Subscribe" className='bg-purple rounded-md py-4 px-5 text-white'/>
+                    <form onClick={handleSubmit(subscribe)} action="" className='flex gap-5 items-start'>
+                        <div className="newslater-input-wapper flex flex-col">
+                        <input type="email" className='border rounded-md py-4 text-sm px-5 w-96' placeholder='Your Email' {...register("email", {
+                            required: {
+                            value:true,
+                            message:"Eamil field can't be empty"
+                        },
+                        pattern:{
+                            value:/^[A-Za-z]+$/,
+                            message:"Email should be add atleast @ and ."
+                        }})}/>
+                          {errors.email &&(  <p className='text-red-700 text-sm mt-2'>{errors.email.message}</p>
+                        )}
+                        </div>
+                        <input  type="submit" value="Subscribe" className='bg-purple rounded-md py-4 px-5 text-white cursor-pointer'/>
                     </form>
                 </div>
                 </div> 
@@ -70,7 +93,7 @@ const Footer = () => {
 
                                 <li className="mb-4">
                                     <Link
-                                    to="mail:info@thinklife.com"
+                                    to="mailto:info@thinklife.com"
                                         className="hover:underline inline-flex gap-2 text-white"
                                         rel="noreferrer"
                                     >

@@ -12,21 +12,24 @@
           "heroPera": {
             "value": "Tailored insurance policies with proper coverages and low rates. You can quote and buy your policy instantly online."
           },
-
           "heroImage": {
             "value": "/images/himnakan.png"
           },
-          "butttonTxt": {
+          "buttonTxt": {
             "value": "Get Started"
           }
         },
         "howItWork": {
-          "heading": {
-            "value": "How It Works"
-          },
-          "headingPara": {
-            "value": " Life insurance is a must if your loved ones are financially dependent on you. It shields your beneficiaries from unforeseen circumstances and supports them through a painful time of loss."
-          },
+          "howItWorkHead": [
+            {
+              "heading": {
+                "value": "How It Works"
+              },
+              "headingPara": {
+                "value": "Life insurance is a must if your loved ones are financially dependent on you. It shields your beneficiaries from unforeseen circumstances and supports them through a painful time of loss."
+              }
+            }
+          ],
           "howCardData": [
             {
               "cardContent": {
@@ -37,7 +40,7 @@
                   "value": "Apply"
                 },
                 "CardPara": {
-                  "value": " Choose your coverage and apply. Fill out the application with more detailed information about yourself, your health, and your lifestyle."
+                  "value": "Choose your coverage and apply. Fill out the application with more detailed information about yourself, your health, and your lifestyle."
                 }
               }
             },
@@ -50,7 +53,7 @@
                   "value": "Get a Quote"
                 },
                 "CardPara": {
-                  "value": " Provide some basic information to get an estimated premium amount and coverage options."
+                  "value": "Provide some basic information to get an estimated premium amount and coverage options."
                 }
               }
             },
@@ -63,36 +66,83 @@
                   "value": "Get Covered"
                 },
                 "CardPara": {
-                  "value": " Receive confirmation and a policy document after we process your application and payment. "
+                  "value": "Receive confirmation and a policy document after we process your application and payment."
                 }
               }
             }
           ]
         },
-        "faqsection":[
-            {
-                "faqs":{
-                    "faqheading":{
-                    "value":"What is life insurance?"
-                }, 
-                "faqanswer":{
-                    "value":"Life insurance is a contract between an individual and an insurer that provides protection against the financial consequences of death."
-                }
-                }
+        "faqHeading":[
+          {
+            "heading":{
+              "value":"Frequently Asked Questions"
             },
-            {
-                "faqs":{
-                    "faqheading":{
-                        "value":"How do I decide if I need life insurance?"
-                    },
-                    "faqanswer":{
-                        "value":"There are lots of factors that go into deciding whether or not you need life insurance, including how much debt you have and how many dependents rely on you financially. But it all comes down to one question: if something happened to you tomorrow, would your family be able to keep paying their bills? If not, then yes—you should get life insurance."
-                    }
-                }
+            "headingPara":{
+              "value":"Getting life insurance is a big decision, and it's one you should make with care. Here are a few questions to help you understand life insurance and what it can do for you and your family."
             }
-            
-        ]
+          }
+        ],
+        "faqsection": [
+        {
+          "faqs": {
+            "faqheading": {
+              "value": "What is life insurance?"
+            },
+            "faqanswer": {
+              "value": "Life insurance is a contract between an individual and an insurer that provides protection against the financial consequences of death."
+            }
+          }
+        },
+        {
+          "faqs": {
+            "faqheading": {
+              "value": "How do I decide if I need life insurance?"
+            },
+            "faqanswer": {
+              "value": "There are lots of factors that go into deciding whether or not you need life insurance, including how much debt you have and how many dependents rely on you financially. But it all comes down to one question: if something happened to you tomorrow, would your family be able to keep paying their bills? If not, then yes—you should get life insurance."
+            }
+          }
+        },
+        {
+          "faqs": {
+            "faqheading": {
+              "value": "How much life insurance do I need?"
+            },
+            "faqanswer": {
+              "value": "A good rule of thumb is to have life insurance coverage that is equal to 10-12 times your annual income. However, this can vary depending on your personal financial situation. You should consider factors such as your debts, mortgage, education expenses, and any other financial obligations your loved ones would have in the event of your demise."
+            }
+          }
+        },
+        {
+          "faqs": {
+            "faqheading": {
+              "value": "Should I get term or permanent life insurance?"
+            },
+            "faqanswer": {
+              "value": "Whether to get term or permanent life insurance depends on your needs. Term life insurance covers you for a specific period of time, such as 10 or 20 years, and is often more affordable than permanent life insurance. On the other hand, permanent life insurance provides coverage for your whole life and may have a cash value component. To make the right choice, you should talk to a financial advisor or insurance agent."
+            }
+          }
+        },
+        {
+          "faqs": {
+            "faqheading": {
+              "value": "How much does life insurance cost?"
+            },
+            "faqanswer": {
+              "value": "The cost of life insurance depends on factors such as age, health, lifestyle, and the type of policy. Get a free quote now to determine the cost of your policy."
+            }
+          }
+        }
+         ],
+      "testimonialHeading":[
+        {
+          "heading":{
+            "value":"What People Say About Us"
+          }
+        }
+      ]
       }
+      
     }
   }
 }
